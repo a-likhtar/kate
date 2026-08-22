@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="День рождения Kate" />
+    <title>С днём рождения, Kate</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+
+    <header class="hero">
+      <p class="eyebrow" data-bind="eyebrow"></p>
+      <h1>
+        <span data-bind="greeting"></span>
+        <em data-bind="name"></em>
+      </h1>
+      <p class="lead" data-bind="lead"></p>
+      <button class="cta" type="button" id="celebrate-btn">Запустить конфетти</button>
+    </header>
+
+    <main>
+      <section class="card" id="about">
+        <h2>Этот сайт</h2>
+        <p>
+          Статический проект на HTML, CSS и JavaScript. Его можно открыть локально
+          и опубликовать на GitHub Pages без сборки.
+        </p>
+      </section>
+
+      <section class="card" id="gallery">
+        <h2>Фото</h2>
+        <p class="hint">Положите изображения в <code>assets/images/</code> и добавьте их в <code>js/config.js</code>.</p>
+        <div class="gallery" id="gallery-grid"></div>
+      </section>
+
+      <section class="card" id="wishes">
+        <h2>Пожелания</h2>
+        <ul class="wishes" id="wishes-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Kate birthday · <span id="year"></span></p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

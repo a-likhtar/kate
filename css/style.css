@@ -1,0 +1,181 @@
+:root {
+  --bg: #f4efe6;
+  --ink: #2b1d1a;
+  --muted: #6d5852;
+  --wine: #7a2436;
+  --rose: #c46a7a;
+  --gold: #c4a15a;
+  --card: rgba(255, 251, 246, 0.86);
+  --shadow: 0 18px 50px rgba(80, 36, 28, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Outfit, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(196, 161, 90, 0.22), transparent 36%),
+    radial-gradient(circle at 88% 0%, rgba(196, 106, 122, 0.18), transparent 32%),
+    var(--bg);
+}
+
+#confetti {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+  width: min(880px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 96px 0 40px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--rose);
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.92;
+}
+
+h1 em {
+  display: block;
+  font-style: italic;
+  color: var(--wine);
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.lead,
+.hint,
+.card p,
+.wishes,
+footer {
+  color: var(--muted);
+}
+
+.lead {
+  max-width: 36rem;
+  margin: 20px auto 28px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cta {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 22px;
+  background: var(--wine);
+  color: #fffaf4;
+  text-decoration: none;
+  font: 500 0.95rem Outfit, sans-serif;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: #611b2b;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.hint {
+  margin-top: 0;
+}
+
+code {
+  font-size: 0.92em;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #eadfd3;
+  min-height: 160px;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.gallery .placeholder {
+  display: grid;
+  place-items: center;
+  height: 160px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.wishes {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+footer {
+  padding: 16px 0 48px;
+  text-align: center;
+}
+
+.not-found {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.not-found .card {
+  width: min(520px, calc(100% - 32px));
+  text-align: center;
+}
