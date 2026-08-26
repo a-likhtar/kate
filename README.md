@@ -1,4 +1,4 @@
-# Kate birthday
+# Катюша · birthday
 
 Статический сайт на HTML, CSS и JavaScript для GitHub Pages. Сборка не нужна.
 
